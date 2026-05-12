@@ -1,56 +1,55 @@
-# Welcome to your Expo app 👋
+# ✨ GlassNotes — Premium Note-Taking Experience
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+GlassNotes is a modern, high-performance note-taking application built with **React Native** and **Expo**. It features a stunning **Glassmorphism UI**, seamless dark mode transitions, and a robust state management system to keep your thoughts organized in style.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Key Features
 
+- 💎 **Glassmorphism UI**: Beautifully frosted note cards using `expo-glass-effect`.
+- 🌓 **Dynamic Theming**: Smooth toggle between Light and Dark modes with system-aware defaults.
+- 🔍 **Real-time Search**: Instant filtering by title, content, or category tags.
+- 📌 **Note Pinning**: Keep your most important thoughts at the very top.
+- 🏷️ **Categorization**: Organize notes into *Personal*, *Work*, and *Learning* with color-coded tags.
+- 📊 **Writing Stats**: Live word count, character count, and estimated reading time.
+- 📱 **Responsive Design**: Optimized layouts for both phones and tablets (multi-column support).
+- 💾 **Persistent Storage**: Robust global state using React Context API.
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Sameer-ts-tech/Notes-App.git
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📂 Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+Notes/
+├── src/
+│   ├── app/            # Expo Router screens (index, editor)
+│   ├── components/     # Reusable UI components
+│   ├── context/        # Global state (NotesContext)
+│   ├── constants/      # Theme, Sample Data, Configs
+│   └── store/          # Logic for persistent data
+├── assets/             # Images, fonts, and icons
+└── package.json        # Dependencies and scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+*Built with ❤️ by Sameer*
