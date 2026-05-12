@@ -1,16 +1,29 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import React from 'react';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NotesProvider, useNotes } from '../context/NotesContext';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+function NavStack() {
+  const { isDark } = useNotes();
+  
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        animation: 'slide_from_right',
+        contentStyle: {
+          backgroundColor: isDark ? '#0C0A09' : '#FAFAF8',
+        },
+      }}
+    />
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <SafeAreaProvider>
+      <NotesProvider>
+        <NavStack />
+      </NotesProvider>
+    </SafeAreaProvider>
   );
 }
